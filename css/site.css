@@ -1,0 +1,224 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: #eeeeee;
+  scroll-behavior: smooth;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+  white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+  max-width: 280px;
+}
+
+/* NAVBAR */
+#clear {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: #ff0b0b94;
+  color: white;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  right: 0%;
+}
+
+#clear:hover {
+  background-color: #ffffff52;
+  color: #000000e0;
+}
+
+/*INDEX PAGE*/
+
+.borda {
+  border: 5px solid black;
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 10s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23f3826f' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='2' stroke-dasharray='388'/%3E %3C/svg%3E")
+    1;
+}
+
+diminuir {
+  font-size: 26px;
+  margin-bottom: 1vh;
+}
+
+.calculate {
+  text-align: center !important;
+  margin: auto !important;
+}
+
+.calc-input {
+  background-image: repeating-linear-gradient(#fff81430, rgb(59 59 59 / 29%));
+}
+
+.calc-label {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bolder;
+  text-align: left;
+}
+
+.label-valor {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: left;
+  margin-left: 1vw;
+  color: black;
+  display: none;
+}
+
+#resultado-magnitude,
+#resultado-tempo,
+#resultado-amplitude {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.calc-btn {
+  text-decoration: none !important;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+.calc-btn:hover {
+  color: white;
+}
+
+.botao-calcular-magnitude,
+.botao-calcular-tempo,
+.botao-calcular-amplitude {
+  text-align: center;
+}
+
+#result {
+  display: block;
+  margin: auto;
+  background-color: #95ff7f78;
+  background-image: linear-gradient(#11a9130d, #74d81052);
+  width: 80%;
+  min-height: 10vh;
+  max-height: 230px;
+}
+
+.divRes {
+  text-align: center;
+  font-family: Arial;
+  font-weight: 500;
+  font-size: 20px;
+  width: 100%;
+  display: none;
+  background-image: repeating-linear-gradient(#11a9130d, #74d81052);
+}
+
+#howto {
+  display: none;
+}
+
+.text-steps {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#equation {
+  font-size: 30px;
+}
+
+.ads {
+  margin-top: 3vh;
+  width: 50%;
+  height: 100px;
+  border: 2px solid black;
+}
+
+.img-ads {
+  margin: auto;
+  text-align: center;
+}
+
+.btnCopy {
+  margin-top: 1vh;
+  display: none;
+}
+
+.how-to-amplitude {
+  display: none;
+}
+
+.how-to-tempo {
+  display: none;
+}
+
+.how-to-magnitude {
+  display: none;
+}
+
+.unidade-medida {
+  font-size: 10px;
+  color: red;
+}
+
+[data-row-calculo="tempo"] {
+  display: none;
+}
+
+/*
+*   TOOLTIP
+*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  opacity: 1 !important;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
