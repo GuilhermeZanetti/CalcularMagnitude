@@ -1,7 +1,11 @@
 /*
  *	
- *	 CALCULOS
+ *	 CÁLCULOS
  *	
+ *          CRÉDITOS:
+ *   Instagram: @guilhermezanetti_
+ *   GitHub: GuilhermeZanetti
+ *   E-mail: @guilherme.t.zanetti@gmail.com
  */
 
 document.getElementById("formCalculoMagnitude").onsubmit = function (e) {
@@ -51,7 +55,7 @@ function calcular(A, T, M, calculo) {
     if (calculo == "amplitude") {
 
         var mT = 8 * T;
-        var subtracao = (-2.92) + (M * -1); //somando Valor por mover os termos
+        var subtracao = (-2.92) + (M * -1);
         var logT = Math.log10(mT) * -3;
         subtracao = subtracao * -1;
         var soma = Math.pow(10, Math.log10(Math.pow(mT, -3))) * Math.pow(10, subtracao);
@@ -65,7 +69,7 @@ function calcular(A, T, M, calculo) {
         mostrarPassoAPasso(A, T, M, soma, calculo);
     }
     if (calculo == "tempo") {
-        //var subtracao = (-2.92) + (M * -1); //somando Valor por mover os termos
+        //var subtracao = (-2.92) + (M * -1);
         ////var logT = Math.log10(8 * icog) * -3;
         //var logA = Math.log10(A);
         ////var soma = logA + (logT * -1) - subtracao;

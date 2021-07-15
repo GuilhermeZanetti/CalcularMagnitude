@@ -19,14 +19,14 @@
                                                     class="unidade-medida">(mm)</sup></label>
                                             <input type="number" class="calc-input" name="amplitude" value="" required
                                                 data-calculo="magnitude" data-tipo-valor="amplitude"
-                                                data-id-valor="amplitude-magnitude" />
+                                                data-id-valor="amplitude-magnitude" step="any" />
                                         </div>
                                         <div class="col-md-4 col-lg-12 col-sm-6">
                                             <label class="calc-label" for="tempo">Insira o tempo<sup
                                                     class="unidade-medida">(s)</sup></label>
                                             <input type="number" class="calc-input" name="tempo" value="" required
                                                 data-calculo="magnitude" data-tipo-valor="tempo"
-                                                data-id-valor="tempo-magnitude" />
+                                                data-id-valor="tempo-magnitude" step="any" />
                                         </div>
                                         <div class="col-md-4 col-lg-12 col-sm-12 botao-calcular-magnitude">
                                             <input id="btnCalcMagn" type="submit" class="btn btn-success"
@@ -59,14 +59,14 @@
                                             <label class="calc-label" for="_magnitude">Insira a magnitude</label>
                                             <input type="number" class="calc-input" name="_magnitude" value="" required
                                                 data-calculo="amplitude" data-tipo-valor="magnitude"
-                                                data-id-valor="magnitude-amplitude" />
+                                                data-id-valor="magnitude-amplitude" step="any" />
                                         </div>
                                         <div class="col-md-4 col-lg-12 col-sm-6">
                                             <label class="calc-label" for="_tempo">Insira o tempo<sup
                                                     class="unidade-medida">(s)</sup></label>
                                             <input type="number" class="calc-input" name="_tempo" value="" required
                                                 data-calculo="amplitude" data-tipo-valor="tempo"
-                                                data-id-valor="tempo-amplitude" />
+                                                data-id-valor="tempo-amplitude" step="any" />
                                         </div>
                                         <div class="col-md-4 col-lg-12 col-sm-12 botao-calcular-amplitude">
                                             <input id="btnCalcAmp" type="submit" class="btn btn-success calc-btn"
@@ -94,15 +94,15 @@
                                 <div class="col-md-4">
                                     <label class="calc-label" for="magnitude_">Insira a magnitude</label>
                                     <input type="number" class="calc-input" name="magnitude_" value=""
-                                        data-calculo="tempo" data-tipo-valor="magnitude"
-                                        data-id-valor="magnitude-tempo" />
+                                        data-calculo="tempo" data-tipo-valor="magnitude" data-id-valor="magnitude-tempo"
+                                        step="any" />
                                 </div>
                                 <div class="col-md-4">
                                     <label class="calc-label" for="amplitude_">Insira a amplitude<sup
                                             class="unidade-medida">(s)</sup></label>
                                     <input type="number" class="calc-input" name="amplitude_" value=""
-                                        data-calculo="tempo" data-tipo-valor="amplitude"
-                                        data-id-valor="amplitude-tempo" />
+                                        data-calculo="tempo" data-tipo-valor="amplitude" data-id-valor="amplitude-tempo"
+                                        step="any" />
                                 </div>
                                 <div class="col-md-4 botao-calcular-tempo">
                                     <input id="btnCalcTempo" type="submit" class="btn btn-success calc-btn"
