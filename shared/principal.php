@@ -115,182 +115,192 @@
             </div>
         </div>
     </section>
-
-    <h2 class="res-title">Resultado</h2>
-    <section id="result">
-        <div class="row">
-            <div class="container" style="width: 100%;">
-                <div id="func-result">
-                    <div class="col-md-12">
-                        <div class="col-md-6">
+    <div class="row">
+        <h2 class="res-title">Resultado</h2>
+        <section id="result">
+            <div class="row">
+                <div class="container" style="width: 100%;">
+                    <div id="func-result">
+                        <div class="col-md-12">
                             <div class="row">
-                                <label class="label-valor" for="res">Valor real</label>
-                                <input type="text" name="res" id="res" class="divRes" value="" />
-                                <div class="btn btnCopy">
-                                    <button class="tooltip" onclick="copyText(1)">Copiar <span
-                                            class="tooltiptext tooltipCopy">Copiar</span></button>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <label class="label-valor" for="res">Valor real</label>
+                                        <input type="text" name="res" id="res" class="divRes" value="" />
+                                        <div class="btn btnCopy">
+                                            <button class="tooltip" onclick="copyText(1)">Copiar <span
+                                                    class="tooltiptext tooltipCopy">Copiar</span></button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
                             <div class="row">
-                                <label class="label-valor" for="resAprox">Valor aproximado</label>
-                                <input type="text" name="resAprox" id="resAprox" class="divRes" value="" />
-                                <div class="btn btnCopy">
-                                    <button class="tooltip" onclick="copyText(2)">Copiar <span
-                                            class="tooltiptext tooltipCopy">Copiar</span></button>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <label class="label-valor" for="resAprox">Valor aproximado</label>
+                                        <input type="text" name="resAprox" id="resAprox" class="divRes" value="" />
+                                        <div class="btn btnCopy">
+                                            <button class="tooltip" onclick="copyText(2)">Copiar <span
+                                                    class="tooltiptext tooltipCopy">Copiar</span></button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="descricao-terremoto" class="table-responsive"
-                            style="display:none; margin-bottom: 100px;">
-                            <table id="table-desc" class="table" style="">
-                            </table>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="row">
-        <h2 style="margin-top: 5vh;">Como chegar ao resultado</h2>
+        </section>
     </div>
-    <section id="howto">
+    <div class="row">
+        <h2>Como chegar ao resultado</h2>
+    </div>
+    <div class="row">
+        <section id="howto">
 
-        <div class="row">
-            <div class="container">
-                <div class="row" id="explicacao-equacao">
-                    <div class="container">
-                        <h3 style="margin-top: 5vh;">Usando a equação</h3>
-                        <p id="equation"><strong><em>M</em> = log<sub>10</sub><em>A</em> &#10010; 3
-                                log<sub>10</sub>(8&#120491;<em>t</em>)&#9866;2,92 &#9868;
-                                log<sub>10</sub>&#10088;<em>A</em>
-                                <diminuir>&#9679;</diminuir>&#120491;<em>t</em><sup>3</sup>&#247;1,62&#10089;
-                            </strong></p>
+            <div class="row">
+                <div class="container">
+                    <div class="row" id="explicacao-equacao">
+                        <div class="container">
+                            <h3>Usando a equação</h3>
+                            <p id="equation"><strong><em>M</em> = log<sub>10</sub><em>A</em> &#10010; 3
+                                    log<sub>10</sub>(8&#120491;<em>t</em>)&#9866;2,92 &#9868;
+                                    log<sub>10</sub>&#10088;<em>A</em>
+                                    <diminuir>&#9679;</diminuir>&#120491;<em>t</em><sup>3</sup>&#247;1,62&#10089;
+                                </strong></p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <p class="col-md-12">
-                        <img src="content/amplitude.svg" alt="Amplitude" /> é a amplitude das ondas
-                        sísmicas, em milímetros, medida directamente no sismograma.
-                    </p>
-                    <p class="col-md-12">
-                        <img src="content/tempo.svg" alt="Tempo" /> é o tempo em segundos desde o início
-                        do trem de ondas P (primárias) até à chegada das ondas S (secundárias).
-                    </p>
-                    <p class="col-md-12">
-                        <img src="content/magnitude.svg" alt="Magnitude" /> é a magnitude arbitrária, mas
-                        constante, aplicável a sismos que libertem a mesma quantidade de energia.
-                    </p>
-                </div>
+                    <div class="row">
+                        <p class="col-md-12">
+                            <img src="content/amplitude.svg" alt="Amplitude" /> é a amplitude das ondas
+                            sísmicas, em milímetros, medida directamente no sismograma.
+                        </p>
+                        <p class="col-md-12">
+                            <img src="content/tempo.svg" alt="Tempo" /> é o tempo em segundos desde o início
+                            do trem de ondas P (primárias) até à chegada das ondas S (secundárias).
+                        </p>
+                        <p class="col-md-12">
+                            <img src="content/magnitude.svg" alt="Magnitude" /> é a magnitude arbitrária, mas
+                            constante, aplicável a sismos que libertem a mesma quantidade de energia.
+                        </p>
+                    </div>
 
-                <!-- <a href="http://poligrill.com.br/" target="_blank" class="row">
+                    <!-- <a href="http://poligrill.com.br/" target="_blank" class="row">
                     <div class="container text-center">
                         <img src="~/Content/Imagens/propaganda.jpg" class="img-responsive img-ads" alt="Propagandas" />
                     </div>
                 </a> -->
-                <!--Magnitude-->
-                <div class="row how-to-magnitude">
-                    <div class="col-md-12" id="conteudo-res-magnitude">
-                        <h3 style="margin-top: 5vh !important;">Então <sup class="unidade-medida">Magnitude</sup>
+                    <!--Magnitude-->
+                    <div class="row how-to-magnitude">
+                        <div class="col-md-12" id="conteudo-res-magnitude">
+                            <h3 style="margin-top: 5vh !important;">Então <sup class="unidade-medida">Magnitude</sup>
+                            </h3>
+                            <div class="steps text-center">
+                                <h4>Multiplique</h4>
+                                <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
+                                    3log<sub>10</sub>(8 * <span id="time-steps"></span>) - 2,92</p>
+                                <h4>Transforme a equação</h4>
+                                <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
+                                    3log<sub>10</sub>(<span class="mT-steps"></span>) - 2,92</p>
+                                <h4>Simplifique a expressão</h4>
+                                <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
+                                    3log<sub>10</sub>(<span class="mT-steps"></span><sup>3</sup>) - 2,92</p>
+                                <h4>Solução</h4>
+                                <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span> *
+                                    <span class="mT-steps"></span><sup>3</sup>) - 2,92
+                                </p>
+                                <p class="text-steps">M = <span id="res-steps"></span></p>
+                            </div>
+                        </div>
+                        <h3 style="display:none;" id="howtoErrorMagnitude">Não foi possivel calcular o passo a passo.
                         </h3>
-                        <div class="steps text-center">
-                            <h4>Multiplique</h4>
-                            <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
-                                3log<sub>10</sub>(8 * <span id="time-steps"></span>) - 2,92</p>
-                            <h4>Transforme a equação</h4>
-                            <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
-                                3log<sub>10</sub>(<span class="mT-steps"></span>) - 2,92</p>
-                            <h4>Simplifique a expressão</h4>
-                            <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
-                                3log<sub>10</sub>(<span class="mT-steps"></span><sup>3</sup>) - 2,92</p>
-                            <h4>Solução</h4>
-                            <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span> *
-                                <span class="mT-steps"></span><sup>3</sup>) - 2,92
-                            </p>
-                            <p class="text-steps">M = <span id="res-steps"></span></p>
-                        </div>
                     </div>
-                    <h3 style="display:none;" id="howtoErrorMagnitude">Não foi possivel calcular o passo a passo.</h3>
-                </div>
-                <hr>
-                <!--Amplitude-->
-                <div class="row how-to-amplitude">
-                    <div class="col-md-12" id="conteudo-res-amplitude">
-                        <h3 style="margin-top: 5vh !important;">Então <sup class="unidade-medida">Amplitude</sup>
+                    <hr>
+                    <!--Amplitude-->
+                    <div class="row how-to-amplitude">
+                        <div class="col-md-12" id="conteudo-res-amplitude">
+                            <h3 style="margin-top: 5vh !important;">Então <sup class="unidade-medida">Amplitude</sup>
+                            </h3>
+                            <div class="steps text-center">
+                                <h4>Monte a expressão:</h4>
+                                <p class="text-steps"><span class="magnitude-step"></span> = log<sub>10</sub>(<span
+                                        class="amplitude-icog-step"></span>) + 3log<sub>10</sub>(8 * <span
+                                        id="time-steps-amplitude"></span>) -2,92</p>
+                                <h4>Multiplique o tempo por 8 e Mova os termos:</h4>
+                                <p class="text-steps">-log<sub>10</sub>(<span class="amplitude-icog-step"></span>) =
+                                    3log<sub>10</sub>(<span class="mT-steps-amplitude"></span>) -2,92 -<span
+                                        class="magnitude-step"></span></p>
+                                <h4>Calcule os termos:</h4>
+                                <p class="text-steps">-log<sub>10</sub>(<span class="amplitude-icog-step"></span>) =
+                                    3log<sub>10</sub>(<span class="mT-steps-amplitude"></span>) <span
+                                        class="result-magnitude-step"></span></p>
+                                <h4>Altere os sinais:</h4>
+                                <p class="text-steps">log<sub>10</sub>(<span class="amplitude-icog-step"></span>) =
+                                    -3log<sub>10</sub>(<span class="mT-steps-amplitude"></span>) + <span
+                                        class="result-magnitude-pos-step"></span></p>
+                                <h4>Converta o logaritmo em exponencial:</h4>
+                                <p class="text-steps"><span class="amplitude-icog-step"></span> =
+                                    10<sup>-3log<sub>10</sub>(<span class="mT-steps-amplitude"></span>) + <span
+                                            class="result-magnitude-pos-step"></span></sup></p>
+                                <h4>Expanda a expressão:</h4>
+                                <p class="text-steps"><span class="amplitude-icog-step"></span> =
+                                    10<sup>-3log<sub>10</sub>(<span class="mT-steps-amplitude"></span>)</sup> *
+                                    10<sup><span class="result-magnitude-pos-step"></span></sup></p>
+                                <h4>Transforme a expressão:</h4>
+                                <p class="text-steps"><span class="amplitude-icog-step"></span> =
+                                    10<sup>log<sub>10</sub>(<span class="mT-steps-amplitude"></span><sup>-3</sup>)</sup>
+                                    * 10<sup><span class="result-magnitude-pos-step"></span></sup></p>
+                                <h4>Simplifique:</h4>
+                                <p class="text-steps"><span class="amplitude-icog-step"></span> = <span
+                                        class="mT-steps-amplitude"></span><sup>-3</sup> * 10<sup><span
+                                            class="result-magnitude-pos-step"></span></sup></p>
+                                <h4>Solução:</h4>
+                                <p class="text-steps"><span class="amplitude-icog-step"></span> = <span
+                                        id="res-steps-amplitude"></span></p>
+                            </div>
+                        </div>
+                        <h3 style="display:none;" id="howtoErrorAmplitude">Não foi possivel calcular o passo a passo.
                         </h3>
-                        <div class="steps text-center">
-                            <h4>Monte a expressão:</h4>
-                            <p class="text-steps"><span class="magnitude-step"></span> = log<sub>10</sub>(<span
-                                    class="amplitude-icog-step"></span>) + 3log<sub>10</sub>(8 * <span
-                                    id="time-steps-amplitude"></span>) -2,92</p>
-                            <h4>Multiplique o tempo por 8 e Mova os termos:</h4>
-                            <p class="text-steps">-log<sub>10</sub>(<span class="amplitude-icog-step"></span>) =
-                                3log<sub>10</sub>(<span class="mT-steps-amplitude"></span>) -2,92 -<span
-                                    class="magnitude-step"></span></p>
-                            <h4>Calcule os termos:</h4>
-                            <p class="text-steps">-log<sub>10</sub>(<span class="amplitude-icog-step"></span>) =
-                                3log<sub>10</sub>(<span class="mT-steps-amplitude"></span>) <span
-                                    class="result-magnitude-step"></span></p>
-                            <h4>Altere os sinais:</h4>
-                            <p class="text-steps">log<sub>10</sub>(<span class="amplitude-icog-step"></span>) =
-                                -3log<sub>10</sub>(<span class="mT-steps-amplitude"></span>) + <span
-                                    class="result-magnitude-pos-step"></span></p>
-                            <h4>Converta o logaritmo em exponencial:</h4>
-                            <p class="text-steps"><span class="amplitude-icog-step"></span> =
-                                10<sup>-3log<sub>10</sub>(<span class="mT-steps-amplitude"></span>) + <span
-                                        class="result-magnitude-pos-step"></span></sup></p>
-                            <h4>Expanda a expressão:</h4>
-                            <p class="text-steps"><span class="amplitude-icog-step"></span> =
-                                10<sup>-3log<sub>10</sub>(<span class="mT-steps-amplitude"></span>)</sup> *
-                                10<sup><span class="result-magnitude-pos-step"></span></sup></p>
-                            <h4>Transforme a expressão:</h4>
-                            <p class="text-steps"><span class="amplitude-icog-step"></span> =
-                                10<sup>log<sub>10</sub>(<span class="mT-steps-amplitude"></span><sup>-3</sup>)</sup>
-                                * 10<sup><span class="result-magnitude-pos-step"></span></sup></p>
-                            <h4>Simplifique:</h4>
-                            <p class="text-steps"><span class="amplitude-icog-step"></span> = <span
-                                    class="mT-steps-amplitude"></span><sup>-3</sup> * 10<sup><span
-                                        class="result-magnitude-pos-step"></span></sup></p>
-                            <h4>Solução:</h4>
-                            <p class="text-steps"><span class="amplitude-icog-step"></span> = <span
-                                    id="res-steps-amplitude"></span></p>
+                    </div>
+                    <hr>
+                    <!--Tempo-->
+                    <div class="row how-to-tempo">
+                        <div class="col-md-12">
+                            <h3 style="margin-top: 5vh !important;">Então <sup class="unidade-medida">Tempo</sup></h3>
+                            <div class="steps text-center">
+                                <h4>Multiplique</h4>
+                                <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
+                                    3log<sub>10</sub>(8 * <span id="time-steps"></span>) - 2,92</p>
+                                <h4>Transforme a equação</h4>
+                                <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
+                                    3log<sub>10</sub>(<span class="mT-steps"></span>) - 2,92</p>
+                                <h4>Simplifique a expressão</h4>
+                                <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
+                                    3log<sub>10</sub>(<span class="mT-steps"></span><sup>3</sup>) - 2,92</p>
+                                <h4>Solução</h4>
+                                <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span> *
+                                    <span class="mT-steps"></span><sup>3</sup>) - 2,92
+                                </p>
+                                <p class="text-steps">M = <span id="res-steps"></span></p>
+                            </div>
                         </div>
                     </div>
-                    <h3 style="display:none;" id="howtoErrorAmplitude">Não foi possivel calcular o passo a passo.</h3>
+                    <hr>
                 </div>
-                <hr>
-                <!--Tempo-->
-                <div class="row how-to-tempo">
-                    <div class="col-md-12">
-                        <h3 style="margin-top: 5vh !important;">Então <sup class="unidade-medida">Tempo</sup></h3>
-                        <div class="steps text-center">
-                            <h4>Multiplique</h4>
-                            <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
-                                3log<sub>10</sub>(8 * <span id="time-steps"></span>) - 2,92</p>
-                            <h4>Transforme a equação</h4>
-                            <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
-                                3log<sub>10</sub>(<span class="mT-steps"></span>) - 2,92</p>
-                            <h4>Simplifique a expressão</h4>
-                            <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span>) +
-                                3log<sub>10</sub>(<span class="mT-steps"></span><sup>3</sup>) - 2,92</p>
-                            <h4>Solução</h4>
-                            <p class="text-steps">M = log<sub>10</sub>(<span class="amplitude-log-step"></span> *
-                                <span class="mT-steps"></span><sup>3</sup>) - 2,92
-                            </p>
-                            <p class="text-steps">M = <span id="res-steps"></span></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <h3 style="display:none;" id="howtoError">Não foi possivel calcular o passo a passo.</h3>
+    <div class="row">
+        <div id="descricao-terremoto" class="table-responsive" style="display:none; margin-bottom: 100px;">
+            <table id="table-desc" class="table" style="">
+            </table>
+        </div>
+    </div>
 </div>
+
+
 
 <script>
 // document.querySelector('div[data-row-calculo="magnitude"]').addEventListener("click", () => {

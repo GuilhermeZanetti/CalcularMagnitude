@@ -48,7 +48,6 @@ function prepararCalculo(calculo) {
 }
 
 function calcular(A, T, M, calculo) {
-
     abrirTemplateResultado();
     var resInteiro = document.querySelector("#res");
     var resAprox = document.querySelector("#resAprox");
@@ -64,8 +63,6 @@ function calcular(A, T, M, calculo) {
 
         resInteiro.value = soma;
         resAprox.value = aprox;
-
-        console.log("resultado amplitude: ", soma);
 
         mostrarPassoAPasso(A, T, M, soma, calculo);
     }
@@ -147,7 +144,7 @@ function mostrarPassoAPasso(Amplitude, Tempo, Magnitude, res, calculo) {
 }
 
 function definirValoresPassoAPasso(A, T, M, calculo, res) {
-
+    descricaoEfeitosOcorrencia(M)
     switch (calculo) {
         case 'magnitude':
 
@@ -203,7 +200,6 @@ function definirValoresPassoAPasso(A, T, M, calculo, res) {
 
             break;
     }
-    descricaoEfeitosOcorrencia(M);
 }
 
 function descricaoEfeitosOcorrencia(Magnitude) {
@@ -214,7 +210,9 @@ function descricaoEfeitosOcorrencia(Magnitude) {
                     <th>Descrição</th>
                     <th>Frequência</th>
                   </tr>`;
-    if (Magnitude < 2.0) {
+
+    var MagnitudeInt = parseInt(Magnitude);
+    if (MagnitudeInt < 2.0) {
         let html =
             `<tr>
                 <td>Microssismos</td>
@@ -223,7 +221,7 @@ function descricaoEfeitosOcorrencia(Magnitude) {
                 <td>~8 000 por dia</td>
             </tr>`
         document.querySelector("#table-desc").innerHTML = tbhead + html;
-    } else if (2 <= Magnitude <= 2.9) {
+    } else if (MagnitudeInt >= 2.0 && MagnitudeInt <= 2.9) {
         let html =
             `<tr>
                 <td align="center">Muito pequeno</td>
@@ -232,7 +230,7 @@ function descricaoEfeitosOcorrencia(Magnitude) {
                 <td>~1 000 por dia</td>
             </tr>`
         document.querySelector("#table-desc").innerHTML = tbhead + html;
-    } else if (3.0 <= Magnitude <= 3.9) {
+    } else if (MagnitudeInt >= 3.0 && MagnitudeInt <= 3.9) {
         let html =
             `<tr>
                 <td align="center">Pequeno</td>
@@ -242,7 +240,7 @@ function descricaoEfeitosOcorrencia(Magnitude) {
                 </td>
             </tr>`
         document.querySelector("#table-desc").innerHTML = tbhead + html;
-    } else if (4.0 <= Magnitude <= 4.9) {
+    } else if (MagnitudeInt >= 4.0 && MagnitudeInt <= 4.9) {
         let html =
             `<tr>
                 <td align="center">Ligeiro</td>
@@ -252,7 +250,7 @@ function descricaoEfeitosOcorrencia(Magnitude) {
                 </td>
             </tr>`
         document.querySelector("#table-desc").innerHTML = tbhead + html;
-    } else if (5.0 <= Magnitude <= 5.9) {
+    } else if (MagnitudeInt >= 5.0 && MagnitudeInt <= 5.9) {
         let html =
             `<tr>
                 <td align="center">Moderado</td>
@@ -262,7 +260,7 @@ function descricaoEfeitosOcorrencia(Magnitude) {
                 </td>
             </tr>`
         document.querySelector("#table-desc").innerHTML = tbhead + html;
-    } else if (6.0 <= Magnitude <= 6.9) {
+    } else if (MagnitudeInt >= 6.0 && MagnitudeInt <= 6.9) {
         let html =
             `<tr>
                 <td align="center">Forte</td>
@@ -272,7 +270,7 @@ function descricaoEfeitosOcorrencia(Magnitude) {
                 </td>
             </tr>`
         document.querySelector("#table-desc").innerHTML = tbhead + html;
-    } else if (7.0 <= Magnitude <= 7.9) {
+    } else if (MagnitudeInt >= 7.0 && MagnitudeInt <= 7.9) {
         let html =
             `<tr>
                 <td align="center">Grande</td>
@@ -282,7 +280,7 @@ function descricaoEfeitosOcorrencia(Magnitude) {
                 </td>
             </tr>`
         document.querySelector("#table-desc").innerHTML = tbhead + html;
-    } else if (8.0 <= Magnitude <= 8.9) {
+    } else if (MagnitudeInt >= 8.0 && MagnitudeInt <= 8.9) {
         let html =
             `<tr>
                 <td align="center">Importante</td>
@@ -292,7 +290,7 @@ function descricaoEfeitosOcorrencia(Magnitude) {
                 </td>
             </tr>`
         document.querySelector("#table-desc").innerHTML = tbhead + html;
-    } else if (9.0 <= Magnitude <= 9.9) {
+    } else if (MagnitudeInt >= 9.0 && MagnitudeInt <= 9.9) {
         let html =
             `<tr>
                 <td align="center">Excepcional</td>
@@ -302,7 +300,7 @@ function descricaoEfeitosOcorrencia(Magnitude) {
                 </td>
             </tr>`
         document.querySelector("#table-desc").innerHTML = tbhead + html;
-    } else if (Magnitude > 10) {
+    } else if (MagnitudeInt > 10) {
         let html =
             `<tr>
                 <td align="center">Extremo</td>
