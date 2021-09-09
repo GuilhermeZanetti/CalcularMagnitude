@@ -26,6 +26,7 @@ function prepararCalculo(calculo) {
     var Magnitude = 0;
     var Tempo = 0;
     var Amplitude = 0;
+
     if (calculo == "amplitude") {
         Magnitude = document.querySelector('[data-id-valor="magnitude-amplitude"]').value;
         Tempo = document.querySelector('[data-id-valor="tempo-amplitude"]').value;
@@ -202,5 +203,114 @@ function definirValoresPassoAPasso(A, T, M, calculo, res) {
 
             break;
     }
+    descricaoEfeitosOcorrencia(M);
+}
 
+function descricaoEfeitosOcorrencia(Magnitude) {
+    document.querySelector("#descricao-terremoto").style.display = "block";
+    var tbhead = `<tr>
+                    <th>Efeitos</th>
+                    <th>Magnitude</th>
+                    <th>Descrição</th>
+                    <th>Frequência</th>
+                  </tr>`;
+    if (Magnitude < 2.0) {
+        let html =
+            `<tr>
+                <td>Microssismos</td>
+                <td>&lt; 2,0</td>
+                <td>Microssismos não perceptíveis pelos humanos. </td>
+                <td>~8 000 por dia</td>
+            </tr>`
+        document.querySelector("#table-desc").innerHTML = tbhead + html;
+    } else if (2 <= Magnitude <= 2.9) {
+        let html =
+            `<tr>
+                <td align="center">Muito pequeno</td>
+                <td align="center">2,0-2,9</td>
+                <td>Geralmente não sentido, apenas detectado/registado por sismógrafos.</td>
+                <td>~1 000 por dia</td>
+            </tr>`
+        document.querySelector("#table-desc").innerHTML = tbhead + html;
+    } else if (3.0 <= Magnitude <= 3.9) {
+        let html =
+            `<tr>
+                <td align="center">Pequeno</td>
+                <td align="center">3,0-3,9</td>
+                <td>Frequentemente sentido, mas raramente causa danos.</td>
+                <td>~49 000 por ano
+                </td>
+            </tr>`
+        document.querySelector("#table-desc").innerHTML = tbhead + html;
+    } else if (4.0 <= Magnitude <= 4.9) {
+        let html =
+            `<tr>
+                <td align="center">Ligeiro</td>
+                <td align="center">4,0-4,9</td>
+                <td>Tremor notório de objectos no interior de habitações, ruídos de choque entre objectos. Sismo significativo, mas com danos importantes improváveis.</td>
+                <td>~6 200 por ano
+                </td>
+            </tr>`
+        document.querySelector("#table-desc").innerHTML = tbhead + html;
+    } else if (5.0 <= Magnitude <= 5.9) {
+        let html =
+            `<tr>
+                <td align="center">Moderado</td>
+                <td align="center">5,0-5,9</td>
+                <td>Pode causar danos importantes em edifícios mal concebidos e em zonas restritas. Provoca apenas danos ligeiros em edifícios bem construídos.</td>
+                <td>800 por ano
+                </td>
+            </tr>`
+        document.querySelector("#table-desc").innerHTML = tbhead + html;
+    } else if (6.0 <= Magnitude <= 6.9) {
+        let html =
+            `<tr>
+                <td align="center">Forte</td>
+                <td align="center">6,0-6,9</td>
+                <td>Pode ser destruidor em áreas habitadas num raio de até 160 quilómetros em torno do epicentro.</td>
+                <td>120 por ano
+                </td>
+            </tr>`
+        document.querySelector("#table-desc").innerHTML = tbhead + html;
+    } else if (7.0 <= Magnitude <= 7.9) {
+        let html =
+            `<tr>
+                <td align="center">Grande</td>
+                <td align="center">7,0-7,9</td>
+                <td>Pode provocar danos graves em zonas vastas.</td>
+                <td>18 por ano
+                </td>
+            </tr>`
+        document.querySelector("#table-desc").innerHTML = tbhead + html;
+    } else if (8.0 <= Magnitude <= 8.9) {
+        let html =
+            `<tr>
+                <td align="center">Importante</td>
+                <td align="center">8,0-8,9</td>
+                <td>Pode causar danos sérios num raio de várias centenas de quilómetros em torno do epicentro.</td>
+                <td>1 por ano
+                </td>
+            </tr>`
+        document.querySelector("#table-desc").innerHTML = tbhead + html;
+    } else if (9.0 <= Magnitude <= 9.9) {
+        let html =
+            `<tr>
+                <td align="center">Excepcional</td>
+                <td align="center">9,0-9,9</td>
+                <td>Devasta zonas num raio de milhares de quilómetros em torno do epicentro.</td>
+                <td>1 em cada 20 anos
+                </td>
+            </tr>`
+        document.querySelector("#table-desc").innerHTML = tbhead + html;
+    } else if (Magnitude > 10) {
+        let html =
+            `<tr>
+                <td align="center">Extremo</td>
+                <td align="center">&gt;10,0</td>
+                <td>Desconhecido. Na história conhecida nunca foi registado um sismo desta magnitude.</td>
+                <td>Extremamente raro (desconhecido).
+                </td>
+            </tr>`
+        document.querySelector("#table-desc").innerHTML = tbhead + html;
+    }
 }

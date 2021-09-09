@@ -143,12 +143,20 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div id="descricao-terremoto" class="table-responsive"
+                            style="display:none; margin-bottom: 100px;">
+                            <table id="table-desc" class="table" style="">
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <h2 style="margin-top: 5vh;">Como chegar ao resultado</h2>
+    <div class="row">
+        <h2 style="margin-top: 5vh;">Como chegar ao resultado</h2>
+    </div>
     <section id="howto">
 
         <div class="row">
